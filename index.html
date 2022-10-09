@@ -1,0 +1,241 @@
+<!-- image view of 4x4 -->
+
+<link rel="stylesheet" href="index.css">
+
+<style>
+    .input_checkbox {
+        display: flex;
+        width: 93%;
+    }
+
+    #Submit {
+        position: fixed;
+        background-color: black;
+        color: white;
+        width: 8%;
+        height: 11%;
+        /* float: right; */
+        top: 48;
+        right: 164;
+
+
+    }
+
+    /* ALert */
+    #snackbar {
+        visibility: hidden;
+        min-width: 250px;
+        margin-left: -125px;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        border-radius: 2px;
+        padding: 16px;
+        position: fixed;
+        z-index: 1;
+        left: 50%;
+        bottom: 30px;
+        font-size: 17px;
+    }
+
+    #snackbar.show {
+        visibility: visible;
+        -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    }
+
+    @-webkit-keyframes fadein {
+        from {
+            bottom: 0;
+            opacity: 0;
+        }
+
+        to {
+            bottom: 30px;
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadein {
+        from {
+            bottom: 0;
+            opacity: 0;
+        }
+
+        to {
+            bottom: 30px;
+            opacity: 1;
+        }
+    }
+
+    @-webkit-keyframes fadeout {
+        from {
+            bottom: 30px;
+            opacity: 1;
+        }
+
+        to {
+            bottom: 0;
+            opacity: 0;
+        }
+    }
+
+    @keyframes fadeout {
+        from {
+            bottom: 30px;
+            opacity: 1;
+        }
+
+        to {
+            bottom: 0;
+            opacity: 0;
+        }
+    }
+</style>
+<!-- Form -->
+<form action="">
+    <!-- GRid for images -->
+    <div class="grid-container">
+        <!-- Checkbox item -->
+        <div class="grid-item">
+
+            <label for="image_1">
+                <img id="img_1" src="https://source.unsplash.com/200x133/?shopping" alt="image_1">
+            </label>
+            <input type="checkbox" id="image_1" class="input_checkbox" name="image_1" onchange="checkboxes()">
+        </div>
+        <div class="grid-item">
+            <label for="image_2">
+                <img id="img_2" src="https://source.unsplash.com/200x133/?music" alt="image_2" onchange="checkboxes()">
+            </label>
+            <input type="checkbox" class="input_checkbox" id="image_2" name="image_2" onchange="checkboxes()">
+        </div>
+        <div class="grid-item">
+            <label for="image_3">
+                <img id="img_3" src="https://source.unsplash.com/200x133/?Sports" alt="image_3" onchange="checkboxes()">
+            </label>
+            <input type="checkbox" class="input_checkbox" id="image_3" name="image_3" onchange="checkboxes()">
+        </div>
+        <div class="grid-item">
+            <label for="image_4">
+                <img id="img_4" src="https://source.unsplash.com/200x133/?Car" alt="image_4" onchange="checkboxes()">
+            </label>
+            <input type="checkbox" class="input_checkbox" id="image_4" name="image_4" onchange="checkboxes()">
+        </div>
+        <div class="grid-item">
+            <label for="image_5">
+                <img id="img_5" src="https://source.unsplash.com/200x133/?Bike" alt="image_5">
+            </label>
+            <input type="checkbox" class="input_checkbox" id="image_5" name="image_5" onchange="checkboxes()">
+        </div>
+        <div class="grid-item">
+            <label for="image_6">
+                <img id="img_6" src="https://source.unsplash.com/200x133/?Fruits" alt="image_6">
+            </label>
+            <input type="checkbox" class="input_checkbox" id="image_6" name="image_6" onchange="checkboxes()">
+        </div>
+        <div class="grid-item">
+            <label for="image_7">
+                <img id="img_7" src="https://source.unsplash.com/200x133/?Dance" alt="image_7">
+            </label>
+            <input type="checkbox" class="input_checkbox" id="image_7" name="image_7" onchange="checkboxes()">
+        </div>
+        <div class="grid-item">
+            <label for="image_8">
+                <img id="img_8" src="https://source.unsplash.com/200x133/?Aliens" alt="image_8">
+            </label>
+            <input type="checkbox" class="input_checkbox" id="image_8" name="image_8" onchange="checkboxes()">
+        </div>
+        <div class="grid-item">
+            <label for="image_9">
+                <img id="img_9" src="https://source.unsplash.com/200x133/?House" alt="image_9">
+            </label>
+            <input type="checkbox" class="input_checkbox" id="image_9" name="image_9" onchange="checkboxes()">
+        </div>
+        <div class="grid-item">
+            <label for="image_10">
+                <img id="img_10" src="https://source.unsplash.com/200x133/?Kids" alt="image_10">
+            </label>
+            <input type="checkbox" class="input_checkbox" id="image_10" name="image_10" onchange="checkboxes()">
+        </div>
+        <div class="grid-item">
+            <label for="image_11">
+                <img id="img_11" src="https://source.unsplash.com/200x133/?Laptop" alt="image_11">
+            </label>
+            <input type="checkbox" class="input_checkbox" id="image_11" name="image_11" onchange="checkboxes()">
+        </div>
+        <div class="grid-item">
+            <label for="image_12">
+                <img id="img_12" src="https://source.unsplash.com/200x133/?Mobile" alt="image_12">
+            </label>
+            <input type="checkbox" class="input_checkbox" id="image_12" name="image_12" onchange="checkboxes()">
+        </div>
+        <div class="grid-item">
+            <label for="image_13">
+                <img id="img_13" src="https://source.unsplash.com/200x133/?Games" alt="image_13">
+            </label>
+            <input type="checkbox" class="input_checkbox" id="image_13" name="image_13" onchange="checkboxes()">
+        </div>
+        <div class="grid-item">
+            <label for="image_14">
+                <img id="img_14" src="https://source.unsplash.com/200x133/?Space" alt="image_14">
+            </label>
+            <input type="checkbox" class="input_checkbox" id="image_14" name="image_14" onchange="checkboxes()">
+        </div>
+        <div class="grid-item">
+            <label for="image_15">
+                <img id="img_15" src="https://source.unsplash.com/200x133/?Police" alt="image_15">
+            </label>
+            <input type="checkbox" class="input_checkbox" id="image_15" name="image_15" onchange="checkboxes()">
+        </div>
+        <div class="grid-item">
+            <label for="image_16">
+                <img id="img_16" src="https://source.unsplash.com/200x133/?Education" alt="image_16">
+            </label>
+            <input type="checkbox" class="input_checkbox" id="image_16" name="image_16" onchange="checkboxes()">
+        </div>
+    </div>
+    <div class="Button">
+        <button type="submit" id="Submit" disabled="true">Submit</button>
+        <div id="snackbar"></div>
+    </div>
+</form>
+
+
+<script>
+    function checkboxes() {
+        var inputElems = document.getElementsByTagName("input"),
+            count = 0;
+
+        for (var i = 0; i < inputElems.length; i++) {
+            if (inputElems[i].type == "checkbox" && inputElems[i].checked == true) {
+                count++;
+
+            }
+
+        }
+        console.log(count);
+
+        if (count >= 16) {
+            document.getElementById("Submit").disabled = false;
+
+            var x = document.getElementById("snackbar");
+            x.className = "show";
+            x.innerHTML = 'All images are selected You can submit the form';
+            setTimeout(function () { x.className = x.className.replace("show", ""); }, 11000);
+
+        } else {
+            document.getElementById("Submit").disabled = true;
+
+            var x = document.getElementById("snackbar");
+            x.className = "show";
+            x.innerHTML = 'Please Select all the images';
+            setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
+
+        }
+
+
+    }
+
+
+</script>
